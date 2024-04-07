@@ -1,0 +1,39 @@
+[build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "palpa-py"
+    authors = [
+        {name = "David Lascelles", email = "davidtlascelles@gmail.com"}
+    ]
+    version = "1.0.0"
+    dependencies = [
+        "bs4",
+        "requests"
+    ]
+    requires-python = ">= 3.8"
+    description = "A library for checking the deposit value for beverage containers in Finland using the Palpa pantillisuus tool"
+    readme = "README.md"
+    license = { text = "GPL-3.0-or-later" }
+    keywords = [
+        "palpa", "recycling", "deposit", "beverage", "bottle", "can", "return", "refund",
+        "pantillisuus", "kierrätys", "pantti", "juoma", "pullo", "tölkki", "arvo", "palautus", "hyvitys",
+        "återvinning", "deposition", "dryck", "flaska", "burk", "retur", "återbetalning"
+    ]
+
+[project.urls]
+    Documentation = "https://github.com/davidtlascelles/PalpaPy"
+    Repository = "https://github.com/davidtlascelles/PalpaPy.git"
+    Issues = "https://github.com/davidtlascelles/PalpaPy/issues"
+
+[tool.coverage]
+    [tool.coverage.run]
+    omit = [
+        '__init__.py',
+        'test/*',
+        '.venv/*'
+    ]
+
+    [tool.coverage.report]
+    skip_empty = true
